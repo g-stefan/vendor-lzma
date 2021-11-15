@@ -36,10 +36,14 @@ if exist %WORKSPACE_PATH_BUILD%\build.done.flag goto :eof
 pushd "source\CPP\7zip\Bundles\Alone7z"
 nmake
 if errorlevel 1 goto makeError
-if "%XYO_PLATFORM%" == "win32-msvc-2017" goto win32
-if "%XYO_PLATFORM%" == "win32-msvc-2019" goto win32
-if "%XYO_PLATFORM%" == "win64-msvc-2017" goto win64
+if "%XYO_PLATFORM%" == "win64-msvc-2022" goto win64
+if "%XYO_PLATFORM%" == "win32-msvc-2022" goto win32
+
 if "%XYO_PLATFORM%" == "win64-msvc-2019" goto win64
+if "%XYO_PLATFORM%" == "win32-msvc-2019" goto win32
+
+if "%XYO_PLATFORM%" == "win64-msvc-2017" goto win64
+if "%XYO_PLATFORM%" == "win32-msvc-2017" goto win32
 goto :eof
 
 :win32
