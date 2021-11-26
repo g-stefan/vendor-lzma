@@ -3,11 +3,11 @@ rem Public domain
 rem http://unlicense.org/
 rem Created by Grigore Stefan <g_stefan@yahoo.com>
 
-echo -^> install-release vendor-lzma
+echo - %BUILD_PROJECT% ^> install-release
 
 set INSTALL_PATH=%XYO_PATH_RELEASE%
 
-set PROJECT=lzma
+set PROJECT=%BUILD_PROJECT%
 
 SETLOCAL ENABLEDELAYEDEXPANSION
 FOR /F "tokens=* USEBACKQ" %%F IN (`xyo-version --no-bump --get "--version-file=version.ini" %PROJECT%`) DO (
