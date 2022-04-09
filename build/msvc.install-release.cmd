@@ -19,5 +19,5 @@ set INSTALL_PATH_BIN=%INSTALL_PATH%
 
 rem // ---
 
-call build\msvc.cmd make
+call build\msvc.make.cmd
 call build\msvc.install.sub.cmd

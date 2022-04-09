@@ -1,1 +1,1 @@
-lzma-19.00,https://www.7-zip.org/sdk.html
+lzma-21.07,https://www.7-zip.org/sdk.html

@@ -23,10 +23,10 @@ del /F /Q archive\%PROJECT%-%VERSION%.7z goto:eof
 rem Source
 pushd archive
 set VENDOR=%PROJECT%-%VERSION%
-set WEB_LINK=https://www.7-zip.org/a/lzma1900.7z
+set WEB_LINK=https://www.7-zip.org/a/lzma2107.7z
 if not exist %VENDOR%.7z curl --insecure --location %WEB_LINK% --output %VENDOR%.7z
-7zr x %VENDOR%.7z -aoa -o%VENDOR%
+7z x %VENDOR%.7z -aoa -o%VENDOR%
 del /F /Q %VENDOR%.7z
-7zr a -mx9 -mmt4 -r- -sse -w. -y -t7z %VENDOR%.7z %VENDOR%
+7z a -mx9 -mmt4 -r- -sse -w. -y -t7z %VENDOR%.7z %VENDOR%
 rmdir /Q /S %VENDOR%
 popd

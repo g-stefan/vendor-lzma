@@ -10,5 +10,5 @@ set INSTALL_PATH_BIN=%XYO_PATH_REPOSITORY%\bin
 
 rem // ---
 
-call build\msvc.cmd make
+call build\msvc.make.cmd
 call build\msvc.install.sub.cmd
