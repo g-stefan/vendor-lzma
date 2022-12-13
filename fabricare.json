@@ -1,7 +1,7 @@
 {
 	"project": {
 		"name" : "lzma",
-		"type" : "xyo-vendor",
+		"type" : "xyo-cpp",
 		"SPDX-License-Identifier": "LicenseRef-bzip2-1.0.8",
 		"sourceLink" : "https://www.7-zip.org/sdk.html",
 		"version" : "21.07"
