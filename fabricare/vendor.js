@@ -26,7 +26,7 @@ Shell.removeFile("archive/" + Project.vendor + ".7z");
 
 // Source
 runInPath("archive", function() {
-	webLink = "https://www.7-zip.org/a/lzma2107.7z";
+	webLink = "https://www.7-zip.org/a/lzma2201.7z";
 	if (!Shell.fileExists(Project.vendor + ".7z")) {
 		exitIf(Shell.system("curl --insecure --location " + webLink + " --output " + Project.vendor + ".7z"));
 	};
