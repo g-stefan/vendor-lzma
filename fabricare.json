@@ -7,7 +7,7 @@
 				"name" : "lzma",
 				"SPDX-License-Identifier": "Unlicense",
 				"sourceLink" : "https://www.7-zip.org/sdk.html",
-				"version" : "22.01",
+				"version" : "23.01",
 				"noVersion" : true
 			}
 		],
