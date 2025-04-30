@@ -1,6 +1,6 @@
 // Created by Grigore Stefan <g_stefan@yahoo.com>
 // Public domain (Unlicense) <http://unlicense.org>
-// SPDX-FileCopyrightText: 2022-2024 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-FileCopyrightText: 2022-2025 Grigore Stefan <g_stefan@yahoo.com>
 // SPDX-License-Identifier: Unlicense
 
 Fabricare.include("vendor");
@@ -23,6 +23,11 @@ Shell.mkdirRecursivelyIfNotExists("output/lib");
 Shell.mkdirRecursivelyIfNotExists("temp");
 
 var outputPath=Shell.getcwd()+"/output";
+
+Shell.removeFileForce("source/CPP/Common/Common.h");
+Shell.removeFileForce("source/C/7zWindows.h");
+Shell.copyFile("fabricare/source/Common.h", "source/CPP/Common/Common.h");
+Shell.copyFile("fabricare/source/7zWindows.h", "source/C/7zWindows.h");
 
 runInPath("source/CPP/7zip/Bundles/Alone7z", function() {
 	exitIf(Shell.system("nmake"));
