@@ -24,11 +24,6 @@ Shell.mkdirRecursivelyIfNotExists("temp");
 
 var outputPath=Shell.getcwd()+"/output";
 
-Shell.removeFileForce("source/CPP/Common/Common.h");
-Shell.removeFileForce("source/C/7zWindows.h");
-Shell.copyFile("fabricare/source/Common.h", "source/CPP/Common/Common.h");
-Shell.copyFile("fabricare/source/7zWindows.h", "source/C/7zWindows.h");
-
 runInPath("source/CPP/7zip/Bundles/Alone7z", function() {
 	exitIf(Shell.system("nmake"));
 	if (Platform.name.indexOf("win64") >= 0) {
@@ -38,3 +33,4 @@ runInPath("source/CPP/7zip/Bundles/Alone7z", function() {
 	};
 	Shell.filePutContents("temp/build.done.flag", "done");
 });
+
